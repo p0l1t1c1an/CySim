@@ -19,9 +19,14 @@ updates:
       interval: "weekly"
     open-pull-requests-limit: 16
     ignore:
-      - dependency-name: ""
+      - dependency-name: "Microsoft.AspNetCore.*"
         versions: ["7.x"]
-
+      - dependency-name: "Microsoft.EntityFrameworkCore"
+        versions: ["7.x"]
+      - dependency-name: "Microsoft.EntityFrameworkCore.*"
+        versions: ["7.x"]
+      - dependency-name: "Microsoft.VisualStudio.*"
+        versions: ["7.x"]
 
   # Maintain dependencies for nuget tests
   - package-ecosystem: "nuget"
@@ -29,6 +34,15 @@ updates:
     schedule:
       interval: "weekly"
     open-pull-requests-limit: 16
+    ignore:
+      - dependency-name: "Microsoft.AspNetCore.*"
+        versions: ["7.x"]
+      - dependency-name: "Microsoft.EntityFrameworkCore"
+        versions: ["7.x"]
+      - dependency-name: "Microsoft.EntityFrameworkCore.*"
+        versions: ["7.x"]
+      - dependency-name: "Microsoft.Data.*"
+        versions: ["7.x"]
 
   # Maintain dependencies for docker
   - package-ecosystem: "docker"
