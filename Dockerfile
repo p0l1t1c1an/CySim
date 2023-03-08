@@ -26,7 +26,7 @@ RUN dotnet publish CySim.csproj -c Debug -o out
 
 
 # Running web server
-FROM mcr.microsoft.com/dotnet/aspnet:6.0-alpine AS run-src
+FROM mcr.microsoft.com/dotnet/aspnet:7.0-alpine AS run-src
 RUN apk add --no-cache curl icu-libs
 WORKDIR /app
 COPY --from=build-src /app/out ./
